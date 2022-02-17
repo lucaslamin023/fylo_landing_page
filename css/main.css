@@ -1,29 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway:wght@700&display=swap');
 
 /* GLOBAL */
-
-*, 
-*::after,
-*::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-}
 
 :root{
     --intro-bg: hsl(217, 28%, 15%);
     --main-bg: hsl(218, 28%, 13%);
     --footer-bg: hsl(216, 53%, 9%);
-    --users-bg: hsl(219, 30%, 18%);
+    --testmonial-bg: hsl(219, 30%, 18%);
     --cyan: hsl(176, 68%, 64%);
     --blue: hsl(198, 60%, 50%);
     --red-error: hsl(0, 100%, 63%);
     --white: hsl(0, 0%, 100%);
+    --body-font: 'Open Sans', sans-serif;
+    --main-font: 'Raleway', sans-serif;
+}
+
+*, 
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html{
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--body-font);
     font-variant: 400;
     font-size: 14px;
     box-shadow: border-box;
@@ -36,7 +37,7 @@ h2,
 h3,
 nav,
 .cta{
-    font-family: "Ralewey", sans-serif;
+    font-family: var(--main-font);
     font-weight: 700;
 }
 
@@ -84,7 +85,7 @@ h2{
     width: 100%;
     min-height: 100vh;
     background: var(--intro-bg) url("/images/bg-curvy-desktop.svg") bottom no-repeat;
-    background-size: 100% 278px;
+    background-size: 100% 270px;
     text-align: center;
 }
 
@@ -102,4 +103,14 @@ h2{
     width: 742px;
     font-size: 22px;
     padding: 0 30px;
+}
+
+.cta{
+    width: 280px;
+    padding: 20px 0;
+    border-radius: 50px;
+    margin: 30px 0;
+    background: linear-gradient(to right, var(--cyan), var(--blue));
+    border: none;
+    
 }
