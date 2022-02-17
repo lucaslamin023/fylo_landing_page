@@ -11,8 +11,6 @@
     --blue: hsl(198, 60%, 50%);
     --red-error: hsl(0, 100%, 63%);
     --white: hsl(0, 0%, 100%);
-    --body-font: 'Open Sans', sans-serif;
-    --main-font: 'Raleway', sans-serif;
 }
 
 *, 
@@ -24,7 +22,7 @@
 }
 
 html{
-    font-family: var(--body-font);
+    font-family: "Open Sans", sans-serif;
     font-variant: 400;
     font-size: 14px;
     box-shadow: border-box;
@@ -37,7 +35,7 @@ h2,
 h3,
 nav,
 .cta{
-    font-family: var(--main-font);
+    font-family: "Ralewey", sans-serif;;
     font-weight: 700;
 }
 
@@ -55,6 +53,7 @@ h2{
     font-size: 40px;
 }
 
+
 /* NAV */
 
 .nav{
@@ -62,8 +61,13 @@ h2{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 73px 80px;
+    padding: 70px 80px;
     background: var(--intro-bg);
+}
+
+.fylo-logo img{
+    width: 178px;
+    height: 52px;
 }
 
 .nav-items{
@@ -90,18 +94,18 @@ h2{
 }
 
 .hero img{
-    width: 740px;
+    width: 725px;
     height: 533px;
 }
 
 .hero h2{
-    width: 742px;
+    width: 690px;
     margin: 46px;
 }
 
 .hero p{
-    width: 742px;
-    font-size: 22px;
+    width: 586px;
+    font-size: 18px;
     padding: 0 30px;
 }
 
@@ -111,6 +115,52 @@ h2{
     border-radius: 50px;
     margin: 30px 0;
     background: linear-gradient(to right, var(--cyan), var(--blue));
-    border: none;
-    
+    border: none; 
 }
+
+/* FEATURES */
+
+.features{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 94px 150px;
+    margin: 130px 0;
+    padding: 0 280px;
+}
+
+.feature{
+    text-align: center;
+}
+
+.feature h3{
+    margin: 25px 0 12px 0;
+}
+
+/* PRODUCTIVE */
+
+.productive{
+    display: flex;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.img-box img{
+    height: 460px;
+    width: auto;
+    margin-right: 45px;
+}
+
+.text-box :not(:last-child){
+    margin-bottom: 25px;  
+}
+
+.description-cta{
+    color: var(--cyan);
+    border-bottom: 1px solid var(--cyan);
+}
+
+.desc-link img {
+    vertical-align: middle;
+    margin-left: 3px;
+  }
