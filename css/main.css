@@ -2,7 +2,7 @@
 
 /* GLOBAL */
 
-:root{
+:root {
     --intro-bg: hsl(217, 28%, 15%);
     --main-bg: hsl(218, 28%, 13%);
     --footer-bg: hsl(216, 53%, 9%);
@@ -15,13 +15,13 @@
 
 *, 
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: "Open Sans", sans-serif;
     font-variant: 400;
     font-size: 14px;
@@ -34,54 +34,57 @@ html{
 h2,
 h3,
 nav,
-.cta{
+.cta {
     font-family: "Ralewey", sans-serif;;
     font-weight: 700;
 }
 
 ul,
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     color: var(--white);
     text-decoration: none;
 }
 
-h2{
+h2 {
     font-size: 40px;
 }
 
+main {
+    margin-bottom: 80px;
+}
 
 /* NAV */
 
-.nav{
+.nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 70px 80px;
+    padding: 50px 80px;
     background: var(--intro-bg);
 }
 
-.fylo-logo img{
+.fylo-logo img {
     width: 178px;
     height: 52px;
 }
 
-.nav-items{
+.nav-items {
     display: flex;
     align-items: center;
 }
 
-.nav-items :not(:last-child){
+.nav-items :not(:last-child) {
     padding-right: 56px;
 }
 
 /* HERO */
 
-.hero{
+.hero {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -93,23 +96,23 @@ h2{
     text-align: center;
 }
 
-.hero img{
+.hero img {
     width: 725px;
     height: 533px;
 }
 
-.hero h2{
+.hero h2 {
     width: 690px;
     margin: 46px;
 }
 
-.hero p{
+.hero p {
     width: 586px;
     font-size: 18px;
     padding: 0 30px;
 }
 
-.cta{
+.cta {
     width: 280px;
     padding: 20px 0;
     border-radius: 50px;
@@ -120,7 +123,7 @@ h2{
 
 /* FEATURES */
 
-.features{
+.features {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -129,33 +132,34 @@ h2{
     padding: 0 280px;
 }
 
-.feature{
+.feature {
     text-align: center;
 }
 
-.feature h3{
+.feature h3 {
     margin: 25px 0 12px 0;
 }
 
 /* PRODUCTIVE */
 
-.productive{
+.productive {
     display: flex;
     align-items: center;
     padding: 0 100px;
 }
 
-.img-box img{
+.img-box img {
     height: 460px;
     width: auto;
     margin-right: 45px;
 }
 
-.text-box :not(:last-child){
+.text-box :not(:last-child) {
     margin-bottom: 25px;  
 }
 
-.description-cta{
+.description-cta {
+    justify-content: space-around;
     color: var(--cyan);
     border-bottom: 1px solid var(--cyan);
 }
@@ -164,3 +168,80 @@ h2{
     vertical-align: middle;
     margin-left: 3px;
   }
+
+/* TESTMONIALS */
+.testmonials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 140px;
+    justify-content: center;
+}
+
+.testmonial {
+    background: var(--testmonial-bg);
+    width: 315px;
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.testmonial:first-child::before {
+    content: url("/images/bg-quotes.png");
+    position: absolute;
+    top: -35px;
+    left: -10px;
+    z-index: -1;
+}
+
+.quote {
+    margin-bottom: 25px;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.profile-info h3 {
+    font-size: 12px;
+}
+
+.profile-info p {
+    font-size: 10px;
+}
+
+/* ACCESS */
+
+.access {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background: var(--intro-bg);
+    padding: 50px 74px 40px 70px;
+    border-radius: 5px;
+}
+
+.access h2{
+    margin-bottom: 20px;
+}
+
+.access p {
+    width: 626px;
+    text-align: center;
+}
+
+input[type="email"] {
+    width: 480px;
+    height: 50px;
+    border-radius: 30px;
+    padding: 20px;
+    margin-right: 20px;
+}
