@@ -12,6 +12,7 @@
     --red-error: hsl(0, 100%, 63%);
     --white: hsl(0, 0%, 100%);
     --light-slate: #ccd6f6;
+    --gradient: linear-gradient(to right, var(--cyan), var(--blue))
 }
 
 *, 
@@ -93,6 +94,10 @@ main {
     padding-right: 56px;
 }
 
+.nav-items li a:hover{
+    color: var(--white);
+}
+
 /* HERO */
 
 .hero {
@@ -125,13 +130,19 @@ main {
 }
 
 .cta {
+    display: inline-block;
+    position: relative;
     color: var(--white);
     width: 280px;
     padding: 20px 0;
     border-radius: 50px;
     margin: 30px 0;
     background: linear-gradient(to right, var(--cyan), var(--blue));
-    border: none; 
+    border: none;
+}
+
+.cta:hover{
+    background: var(--cyan);
 }
 
 /* FEATURES */
@@ -154,7 +165,6 @@ main {
     margin: 25px 0 18px 0;
     font-size: 18px;
 }
-
 
 /* PRODUCTIVE */
 
@@ -179,15 +189,26 @@ main {
 }
 
 .description-cta {
+    display: inline-block;
     justify-content: space-around;
     color: var(--cyan);
     border-bottom: 1px solid var(--cyan);
+    position: relative;
+    transition: transform 0.2s ease;
 }
 
 .description-cta img {
     vertical-align: middle;
     margin-left: 3px;
-  }
+}
+
+.description-cta:hover,
+.description-cta img:hover {
+    filter: brightness(2.8);
+    color: var(--white);
+    transform: translateX(5px)
+}
+
 
 /* TESTMONIALS */
 .testmonials {
@@ -273,7 +294,7 @@ form {
 
 input[type="email"] {
     width: 480px;
-    height: 48px;
+    height: 50px;
     border-radius: 50px;
     padding: 20px 47px;
     outline: none;
@@ -284,13 +305,14 @@ input[type="email"] {
 
 input[type="submit"] {
     width: 200px;
-    height: 48px;
+    height: 50px;
     color: var(--white);
     margin: 0;
+    justify-content: center;
 }
 
 ::placeholder {
-    opacity: 0.4;
+    opacity: 0.5;
   }
 
 /* FOOTER  */
@@ -301,18 +323,22 @@ input[type="submit"] {
     grid-template-columns: 4fr 2fr 1fr 1fr 2fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "logo logo logo logo logo"
+    "logo . . . ."
     "location contact links more-links social";
     column-gap: 70px;
     padding-top: 20%;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
 }    
 
 .footer-logo {
     grid-area: logo;
     margin-left: 80px;
-    width: 178px;
-    height: 54px;
+    margin-bottom: 5%;
+}
+
+.footer-logo img {
+    width: auto;
+    height: 80%;
 }
 
 .location{
@@ -344,7 +370,12 @@ input[type="submit"] {
     height: 16px;
 }
 
-.location-text,
+.location-text {
+    margin-left: 10%;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
 .phone-number,
 .email-address {
     margin-left: 10%;
@@ -367,13 +398,30 @@ input[type="submit"] {
     margin-top: 35%;
 }
 
+.fn-links a,
+.fn-more-links a {
+    color: var(--light-slate);
+}
+
+.fn-links a:hover,
+.fn-more-links a:hover {
+    color: var(--white)
+}
+
 .social-media {
     grid-area: social;
     display: grid;
-    grid-template-columns: repeat(3, 20%);
-    margin-top: 35%;
+    grid-template-columns: repeat(3, 25%);
+    margin-top: 18%;
 }  
 
-.social-media i {
+.social-media a {
     font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.social-media a:hover {
+    color: var(--cyan);
+    border-color: var(--cta-cyan);
+    transform: translateY(-2px);
 }
